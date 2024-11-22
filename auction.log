@@ -1,0 +1,13 @@
+AUCTION: 2024/11/22 12:09:40 main.go:160: Starting Auction server on port 8080
+AUCTION: 2024/11/22 12:09:43 main.go:160: Starting Auction server on port 8081
+AUCTION: 2024/11/22 12:09:50 main.go:101: Success : id1 placed a bid of 500
+AUCTION: 2024/11/22 12:09:50 main.go:101: Success : id1 placed a bid of 500
+AUCTION: 2024/11/22 12:09:53 main.go:127: Success : status=ongoing, highest_bid=500, highest_bidder=id1
+AUCTION: 2024/11/22 12:10:05 main.go:101: Success : id2 placed a bid of 600
+AUCTION: 2024/11/22 12:10:05 main.go:101: Success : id2 placed a bid of 600
+AUCTION: 2024/11/22 12:10:11 main.go:87: Fail: id1's bid 300.000000 is not higher than the current highest bid 600
+AUCTION: 2024/11/22 12:10:11 main.go:87: Fail: id1's bid 300.000000 is not higher than the current highest bid 600
+AUCTION: 2024/11/22 12:10:17 main.go:127: Success : status=ongoing, highest_bid=600, highest_bidder=id2
+AUCTION: 2024/11/22 12:11:23 main.go:135: Auction ended! Winner: id2 with bid 600
+AUCTION: 2024/11/22 12:11:23 main.go:127: Success : status=ended, highest_bid=600, highest_bidder=id2
+AUCTION: 2024/11/22 12:11:28 main.go:127: Success : status=ended, highest_bid=600, highest_bidder=id2

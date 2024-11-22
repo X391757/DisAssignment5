@@ -1,0 +1,21 @@
+LOG: 2024/11/22 12:09:50 coordinator.go:141: Placing bid: Name=id1, Amount=500
+LOG: 2024/11/22 12:09:50 coordinator.go:46: Bid request completed
+LOG: 2024/11/22 12:09:53 coordinator.go:146: Querying auction status...
+LOG: 2024/11/22 12:09:53 coordinator.go:57: Data from replica http://localhost:8080: {"highest_bid":500,"highest_bidder":"id1","status":"ongoing","time_remaining":87}
+
+LOG: 2024/11/22 12:10:05 coordinator.go:141: Placing bid: Name=id2, Amount=600
+LOG: 2024/11/22 12:10:05 coordinator.go:46: Bid request completed
+LOG: 2024/11/22 12:10:11 coordinator.go:141: Placing bid: Name=id1, Amount=300
+LOG: 2024/11/22 12:10:11 coordinator.go:46: Bid request completed
+LOG: 2024/11/22 12:10:17 coordinator.go:146: Querying auction status...
+LOG: 2024/11/22 12:10:17 coordinator.go:54: Error querying replica http://localhost:8080: failed to connect to replica: Get "http://localhost:8080/query": dial tcp 127.0.0.1:8080: connect: connection refused
+LOG: 2024/11/22 12:10:17 coordinator.go:57: Data from replica http://localhost:8081: {"highest_bid":600,"highest_bidder":"id2","status":"ongoing","time_remaining":66}
+
+LOG: 2024/11/22 12:11:23 coordinator.go:146: Querying auction status...
+LOG: 2024/11/22 12:11:23 coordinator.go:54: Error querying replica http://localhost:8080: failed to connect to replica: Get "http://localhost:8080/query": dial tcp 127.0.0.1:8080: connect: connection refused
+LOG: 2024/11/22 12:11:23 coordinator.go:57: Data from replica http://localhost:8081: {"highest_bid":600,"highest_bidder":"id2","status":"ended","time_remaining":0,"winner":"id2"}
+
+LOG: 2024/11/22 12:11:28 coordinator.go:146: Querying auction status...
+LOG: 2024/11/22 12:11:28 coordinator.go:54: Error querying replica http://localhost:8080: failed to connect to replica: Get "http://localhost:8080/query": dial tcp 127.0.0.1:8080: connect: connection refused
+LOG: 2024/11/22 12:11:28 coordinator.go:57: Data from replica http://localhost:8081: {"highest_bid":600,"highest_bidder":"id2","status":"ended","time_remaining":-5,"winner":"id2"}
+
